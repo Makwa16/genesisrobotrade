@@ -1,0 +1,439 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(90deg, #4a00e0, #8e2de2);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Sign Up Form Section */
+.signup-section {
+    background: white;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.signup-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup-section label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.signup-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.signup-section .register-btn {
+    background: linear-gradient(90deg, #f953c6, #b91d73);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-section .register-btn:hover {
+    opacity: 0.9;
+}
+
+.signin-link {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.signin-link a {
+    color: #4a00e0;
+    text-decoration: none;
+}
+
+.signin-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #f953c6;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .signup-section {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License Key Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Generate License Keys</h1>
+    </header>
+
+    <!-- Section for License Key Generation Form -->
+    <section class="generate-key-section">
+        <h2>Create a License Key</h2>
+        <form action="#" id="licenseForm">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Enter user's full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter email address" required>
+
+            <label for="keyExpiry">Choose Expiry Date</label>
+            <select id="keyExpiry">
+                <option value="3days">3 Days</option>
+                <option value="5months">5 Months</option>
+                <option value="lifetime">Lifetime</option>
+            </select>
+
+            <button type="submit" class="generate-btn">Generate Key</button>
+        </form>
+    </section>
+
+    <!-- Section to Display Generated Keys -->
+    <section class="generated-keys-section">
+        <h2>Generated Keys</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>License Key</th>
+                    <th>Expiration Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="keyList">
+                <!-- Generated keys will be displayed here -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Script for handling form submission and key generation -->
+    <script src="app.js"></script>
+</body>
+</html>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #4a00e0;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.generate-key-section, .generated-keys-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #4a00e0;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input, form select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.generate-btn {
+    padding: 10px 20px;
+    background-color: #4a00e0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4a00e0;
+    color: white;
+}
+
+.site-logo {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background-color: #4a00e0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.generate-key-section, .generated-keys-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.generate-btn {
+    padding: 10px 20px;
+    background-color: #4a00e0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+/* Mentor image styling */
+.mentor-img {
+    width: 150px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 50%;
+    display: block;
+}
+
+/* Mentor section styling */
+.mentor-section {
+    margin-top: 30px;
+    text-align: center;
+}
+/* Multi-select dropdown styling */
+select[multiple] {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+/* Mentor image styling */
+.mentor-img {
+    width: 150px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 50%;
+    display: block;
+}
+
+/* Mentor section styling */
+.mentor-section {
+    margin-top: 30px;
+    text-align: center;
+}
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+h1, h2 {
+    margin: 10px 0;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.payment-info {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #5b9bd5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4a8bc0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+}
